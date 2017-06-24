@@ -1,0 +1,73 @@
+.wrapper{
+  width: 100%;
+}
+.menu{
+  height: 100vh;
+  &__top{
+    background-color:pink;
+    height: 385px;
+
+    &__image{
+      width: 240px;
+      height: 240px;
+      margin-left: 100px;
+      background-color: red;
+    }
+  }
+  &__left{
+    height: 208px;
+    width: 270px;
+    float: left;
+    &__title{
+      height: 80px;
+      width: 212px;
+      font-size:20px;
+      line-height: 80px;
+      margin-left: 40px;
+    }
+    &__hours{
+      height: 25px;
+      line-height:  32px;
+      font-size: 1px;
+      margin-left: 40px;
+    }
+  }
+  &__right{
+    height: 200px;
+    width: 888px;
+    background-color: yellow;
+    float: left;
+    &__first{
+      width: 50%;
+      height: 200px;
+      background-color:red;
+      &__details{
+        width: 50%;
+        background-color: grey;
+        float: left;
+        &__title{
+          height: 80px;
+          width: 200px;
+          font-size: 18px;
+        }
+        &__description{
+          height: 40px;
+          width: 200px;
+          font-size: 16px;
+        }
+        &__price{
+          height: 20px;
+          width: 200px;
+          font-size: 14px;
+        }
+      }
+      &__picture{
+        width: 50%;
+        background-color: green;
+        float: left;
+      }
+    }
+  }
+}
+
+

@@ -4,17 +4,19 @@
   line-height: 1.71;
   background-color: #fff;
   min-height: 100%;
-  background-color: orange;
   &__left{
     width: 10%;
     height: 72px;
-    background-color: green;
-    float:left;
+    float:left; 
+    font-size: 22px;
+    font-style: bold;
+    text-align: center;
+    line-height:  72px;
+    color: green;
   }
   &__right{
     width: 340px;
     height: 72px;
-    background-color: pink;
     float: right;
     line-height:  72px;
     &__client_name{
@@ -24,19 +26,18 @@
       text-align: center;
       font-family: ff-clan-web-pro, "Helvetica Neue", Helvetica, sans-serif;
       font-weight: 400;
-      background-color: blue;
     }
     &__clientFn{
       float: left;
+      text-align: center;
       height: 32px;
       width: 47px;
-      background-color: yellow;
     }
     &__cart{
       float: left;
       height: 25px;
-      width: 23px;  
-      background-color: red;
+      width: 23px;
+      text-align:  center;
     }
   }
 }

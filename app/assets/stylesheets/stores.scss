@@ -30,29 +30,35 @@
       }
 
       &__base{
-        background-color: blue;
+        background-color: grey;
 
         &__lists{
           height: 357px;
-          width: 1035px;
-          margin-left: 70px;
-          margin-right: 70px;
           &__left{
             background-color: orange;
             height: 357px;
-            width: 340px;
+            width:33%;
             float: left;
+            &__image1{
+              height: 250px;
+              width: 340px;
+              background-color: pink;
+              margin: 0, auto;
+            }
+            &__title1{
+              font-size: 20px;
+            }
           }
           &__center{
             background-color: green;
             height: 357px;
-            width: 340px;
+            width: 33%;
             float: left;
           }
           &__right{
             background-color: red;
             height: 357px;
-            width: 340px;
+            width: 34%;
             float: left;
           }
         }

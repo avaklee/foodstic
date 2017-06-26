@@ -7,7 +7,7 @@
   &__left{
     width: 10%;
     height: 72px;
-    float:left; 
+    float:left;
     font-size: 22px;
     font-style: bold;
     text-align: center;
@@ -15,13 +15,14 @@
     color: green;
   }
   &__right{
-    width: 340px;
+    width: 500px;
     height: 72px;
     float: right;
     line-height:  72px;
+
     &__client_name{
       float:left;
-      width:144px;
+      width:260px;
       height: 24px;
       text-align: center;
       font-family: ff-clan-web-pro, "Helvetica Neue", Helvetica, sans-serif;
@@ -31,12 +32,13 @@
       float: left;
       text-align: center;
       height: 32px;
-      width: 47px;
+      width: 80px;
     }
+
     &__cart{
       float: left;
       height: 25px;
-      width: 23px;
+      width: 80px;
       text-align:  center;
     }
   }

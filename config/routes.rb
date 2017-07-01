@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   devise_for :stores, controllers: {
     sessions: 'stores/sessions',
     passwords: 'stores/passwords',
@@ -10,8 +11,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
    root to: "stores#index"
-   resources :menus
-
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+   resources :stores, only: [:index] do
+     resources :menus, only: [:index, :new, :create, :edit, :update, :destroy]
+   end
 end

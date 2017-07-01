@@ -4,20 +4,28 @@
 .menu{
   height: 100vh;
   &__top{
-    background-color:pink;
+    background-color: pink;
     height: 385px;
 
-    &__image{
-      width: 240px;
+    &__listing{
+      width: 270px;
       height: 240px;
       margin-left: 100px;
       background-color: red;
+      text-align: center;
+      line-height: 240px;
+      font-size: 30px;
     }
   }
+
   &__left{
     height: 208px;
-    width: 270px;
+    width: 20%;
     float: left;
+    background-color: yellow;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 30px;
     &__title{
       height: 80px;
       width: 212px;
@@ -32,42 +40,34 @@
       margin-left: 40px;
     }
   }
+
   &__right{
-    height: 200px;
-    width: 888px;
-    background-color: yellow;
+    width: 70%;
     float: left;
-    &__first{
-      width: 50%;
-      height: 200px;
-      background-color:red;
+    margin-top: 50px;
+    &__item{
+      width:45%;
+      height:200px;
+      float: left;
       &__details{
-        width: 50%;
-        background-color: grey;
         float: left;
+        width: 40%;
         &__title{
-          height: 80px;
-          width: 200px;
+          margin-top: 20px;
+          margin-left: 30px;
           font-size: 18px;
         }
-        &__description{
-          height: 40px;
-          width: 200px;
-          font-size: 16px;
-        }
         &__price{
-          height: 20px;
-          width: 200px;
-          font-size: 14px;
+          margin-left:30px;
+          margin-top: 100px;
         }
       }
       &__picture{
+        float:left;
         width: 50%;
-        background-color: green;
-        float: left;
       }
     }
   }
 }
 
-
+img {max-width : 100%;}

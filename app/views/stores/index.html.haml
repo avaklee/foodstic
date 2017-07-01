@@ -24,19 +24,19 @@
         .fixed_content__right__clientFn
           = link_to "新規登録", new_user_registration_path, method: :get
 
-
-
   .content-wrapper
     .content
       .content__top レストランや料理を検索
       .content__main
         .content__main__restaurant レストラン
         .content__main__base
-          .content__main__base__lists
-            .content__main__base__lists__left
-              .content__main__base__lists__left__image1
-              .content__main__base__lists__left__title1 hambuger
-              .content__main__base__lists__left__detail1 good hambuger to eat
-            .content__main__base__lists__center
-            .content__main__base__lists__right
+          - @stores.each do|store|
+            .content__main__base__lists
+              .content__main__base__lists__image
+                %img{src: store.image}
+              .content__main__base__lists__title
+              = store.name
+              .content__main__base__lists__detail
+              good hambuger to eat
+
 

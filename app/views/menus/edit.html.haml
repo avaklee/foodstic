@@ -1,0 +1,11 @@
+変更内容を入れてください
+= form_for @menu, url: store_menus_path, method: :patch  do |f|
+  .new_menu
+    = f.label :image do
+      .i.fa.fa-picture-o{"aria-hidden" => "true"}
+        = f.file_field :image
+    .new_menu_name
+      = f.text_field :name, placeholder: "新しいメニューの名前"
+    .new_menu_price
+      = f.text_field :price, placeholder: "価格"
+      = f.submit "SEND", class: "new_message__send_button", data: { disable_with: "save"}

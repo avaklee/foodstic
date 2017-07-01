@@ -30,40 +30,24 @@
       }
 
       &__base{
-        background-color: grey;
-
+          height: 357px;
         &__lists{
           height: 357px;
-          &__left{
-            background-color: orange;
-            height: 357px;
-            width:33%;
-            float: left;
-            &__image1{
-              height: 250px;
-              width: 340px;
-              background-color: pink;
-              margin: 0, auto;
-            }
-            &__title1{
-              font-size: 20px;
-            }
+          width:33%;
+          float: left;
+          &__image{
+            height: 250px;
+            width: 340px;
+            background-size: cover;
           }
-          &__center{
-            background-color: green;
-            height: 357px;
-            width: 33%;
-            float: left;
-          }
-          &__right{
-            background-color: red;
-            height: 357px;
-            width: 34%;
-            float: left;
+          &__title{
+            font-size: 20px;
+            height:40px;
+            width:340px;  
           }
         }
       }
     }
   }
 }
-
+img {max-width : 100%;}

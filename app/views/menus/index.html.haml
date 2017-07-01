@@ -2,28 +2,41 @@
   .fixed_content
     .fixed_content__left Foodstic
     .fixed_content__right
-      .fixed_content__right__client_name こんにちわ、Ava様
-      .fixed_content__right__clientFn A
-      .fixed_content__right__cart cart
+      - if user_signed_in?
+        .fixed_content__right__client_name
+          こんにちわ、#{current_user.name}様
+        .fixed_content__right__clientFn
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+        .fixed_content__right__cart
+          cart
+      -elsif store_signed_in?
+        .fixed_content__right__client_name
+          こんにちわ、#{current_store.name}様
+        .fixed_content__right__clientFn
+          = link_to "ログアウト", destroy_store_session_path, method: :delete
+        .fixed_content__right__cart
+          lists
+      - else
+        .fixed_content__right__client_name
+          こんにちわ、お客様
+        .fixed_content__right__clientFn
+          = link_to "ログイン", new_user_session_path, method: :get
+        .fixed_content__right__clientFn
+          = link_to "新規登録", new_user_registration_path, method: :get
   .menu
     .menu__top
-      .menu__top__image
+      .menu__top__listing Umami burger
     .menu__left
-      .menu__left__title Salad Bar
+      .menu__left__title Umami burger
       .menu__left__hours 6pm- 11pm
+
     .menu__right
-      .menu__right__first
-        .menu__right__first__details
-          .menu__right__first__details__title Salad Bar
-          .menu__right__first__details__description Chicken salad
-          .menu__right__first__details__price Y1200
-        .menu__right__first__picture
-      .menu__right__second
-
-
-
-
-
-
-
-
+      - @menus.each do |menu|
+        .menu__right__item
+          .menu__right__item__details
+            .menu__right__item__details__title
+              = menu.name
+            .menu__right__item__details__price
+              = menu.price
+          .menu__right__item__picture
+            %img{src: menu.image}
